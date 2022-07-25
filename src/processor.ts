@@ -21,7 +21,7 @@ const processor = new SubstrateBatchProcessor()
     archive: lookupArchive("moonriver", { release: "FireSquid" }),
   })
   .setTypesBundle("moonbeam")
-  .addEvmLog(contractAddress, {
+  .addEvmLog("*", {
     filter: [erc721.events["Transfer(address,address,uint256)"].topic],
   });
 
